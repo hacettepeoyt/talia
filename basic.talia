@@ -1,11 +1,13 @@
 def on_start():
     player.tile = tiles[0]
+    write("start")
 
 
 def on_turn():
+    write(f"next turn")
     if player.tile.id == 4:
         write("You win!")
         end()
 
-    sleep(3)
+    sleep(2)
     player.tile = tiles[player.tile.id + 1]
