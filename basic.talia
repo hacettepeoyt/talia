@@ -1,0 +1,11 @@
+def on_start():
+    player.tile = tiles[0]
+
+
+def on_turn():
+    if player.tile.id == 4:
+        write("You win!")
+        end()
+
+    sleep(3)
+    player.tile = tiles[player.tile.id + 1]
